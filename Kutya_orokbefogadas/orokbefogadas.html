@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Örökbefogadás</title>
+    <link rel="stylesheet" href="kutyak.css">
+    <script src="kutyak.js"></script>
+</head>
+<body>
+    <style>
+        #dog {
+        margin-right: 20px;
+    }
+    #dog-image {
+        vertical-align: middle;
+    }
+    </style>
+    <header>
+        <h1>Örökbefogadás</h1>
+        <nav>
+            <button id="menu-btn" class="menu-btn" onclick="toggleMenu()">Menü</button>
+            <div id="menu" class="menu-container">
+                <ul>
+                    <li><a href="main.html">Kezdőlap</a></li>
+                    <li><a href="rolunk.html">Rólunk</a></li>
+                    <li style="background-color: blue;"><a href="kutyak.html">Kutyák</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <form style="text-align: center;" action="orokbefogadas.php" method="POST">
+            <label for="name">Név:</label>
+            <input style="width: 15%;" type="text" id="name" name="name" required><br>
+            <br>
+            <label for="email">Email:</label>
+            <input style="width: 14.5%;" type="email" id="email" name="email" required><br>
+            <br>
+            <label for="phone">Telefonszám:</label>
+            <input style="width: 12%;" type="text" id="phone" name="phone" required><br>
+            <br>
+            <label for="dog">Válassz kutyát:</label>
+            <select id="dog" name="dog" onmouseover="showDogImage(event)" onmouseout="hideDogImage()">
+                <option value="Maxi" data-img="images/dog1.jpg">Maxi</option>
+                <option value="Rex" data-img="images/dog2.jpg">Rex</option>
+                <option value="Lucy" data-img="images/dog3.jpg">Lucy</option>
+                <option value="Bella" data-img="images/dog4.jpg">Bella</option>
+                <option value="Max" data-img="images/dog5.jpg">Max</option>
+                <option value="Bambi" data-img="images/dog6.jpg">Bambi</option>
+                <option value="Zorro" data-img="images/dogs2.jpg">Zorro</option>
+                <option value="Charlie" data-img="images/dog8.jpg">Charlie</option>
+                <option value="Trixi" data-img="images/dog9.jpg">Trixi</option>
+                <option value="Bruno" data-img="images/dog10.jpg">Bruno</option>
+            </select>
+            <img id="dog-image" src="" alt="Kutya képe" style="display:none; width:150px; height:auto; margin-left:20px;">
+            <!-- <label for="dog">Válassz kutyát:</label>
+            <select id="dog" name="dog">
+                <option value="Maxi">Maxi</option>
+                <option value="Rex">Rex</option>
+                <option value="Lucy">Lucy</option>
+                <option value="Bella">Bella</option>
+                <option value="Max">Max</option>
+                <option value="Bambi">Bambi</option>
+                <option value="Zorro">Zorro</option>
+                <option value="Charlie">Charlie</option>
+                <option value="Trixi">Trixi</option>
+                <option value="Bruno">Bruno</option>
+            </select><br> -->
+            <br>
+            <button type="submit">Örökbefogadás</button>
+        </form>
+    </section>
+</body>
+</html>
