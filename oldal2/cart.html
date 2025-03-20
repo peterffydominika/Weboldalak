@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kosár</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Képregény Webshop</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="main.html">Főoldal</a></li>
+                <li><a href="cart.html">Kosár</a></li>
+                <li><a href="rolunk.html">Kapcsolat</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cart">
+            <h2>Kosár tartalma</h2>
+            <ul id="cart-items">
+                <!-- A kosár termékei itt fognak megjelenni -->
+            </ul>
+            <div id="total-price">
+                <p>Összesen: <span id="total-amount">0 Ft</span></p>
+            </div>
+            <button id="checkout">Fizetés</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Képregény Webshop</p>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html>
