@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Örökbefogadás</title>
+    <link rel="stylesheet" href="kutyak.css">
+    <script src="kutyak.js"></script>
+</head>
+<body>
+    <style>
+        #dog {
+        margin-right: 20px;
+    }
+    #dog-image {
+        vertical-align: middle;
+    }
+    </style>
+    <header>
+        <h1>Regisztráció</h1>
+        <nav>
+            <button id="menu-btn" class="menu-btn" onclick="toggleMenu()">Menü</button>
+            <div id="menu" class="menu-container">
+                <ul>
+                    <li><a href="main.html">Kezdőlap</a></li>
+                    <li><a href="rolunk.html">Rólunk</a></li>
+                    <li><a href="kutyak.html">Kutyák</a></li>
+                    <li style="background-color: blue;"><a href="regisztracio.html">Regisztráció</a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <form style="text-align: center;" action="regisztracio.php" method="POST">
+            <label for="firstname">Vezetéknév:</label>
+            <input style="width: 15%;" type="text" id="firstname" name="firstname" required><br>
+            <br>
+            <label for="sirname">Keresztnév:</label>
+            <input style="width: 15%;" type="text" id="sirname" name="sirname" required><br>
+            <br>
+            <label for="email">Email:</label>
+            <input style="width: 14.5%;" type="email" id="email" name="email" required><br>
+            <br>
+            <label for="phone">Telefonszám:</label>
+            <input style="width: 12%;" type="text" id="phone" name="phone" required><br>
+            <br>
+            <label for="address">Lakcím:</label>
+            <input style="width: 15%;" type="text" id="address" name="address" required><br>
+            <br>
+            <label for="password1">Jelszó</label>
+            <input style="width: 15%;" type="password" id="password1" name="password1" required><br>
+            <br>
+            <label for="resetpassword">Jelszó újra:</label>
+            <input style="width: 15%;" type="password" id="resetpassword" name="resetpassword" required><br>
+            <br>
+            <button type="submit" style="margin-bottom: 10px;">Regisztráció</button><br>
+            <a href="bejelentkezes.html">Van már regisztrált fiókod?</a>
+        </form>
+    </section>
+</body>
+</html>
