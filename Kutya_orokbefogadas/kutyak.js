@@ -39,3 +39,63 @@ function hideDogImage() {
     const imgElement = document.getElementById("dog-image");
     imgElement.style.display = "none";
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    let username = sessionStorage.getItem("username");
+    if (username) {
+        document.getElementById("user-info").innerHTML = "Bejelentkezve: " + username;
+    } else {
+        document.getElementById("user-info").innerHTML = '<a href="bejelentkezes.html">Bejelentkezés</a>';
+    }
+});
+
+function addDog(event) {
+    event.preventDefault();
+
+    const name = document.getElementById('dogName').value;
+    const age = document.getElementById('dogAge').value;
+    const size = document.getElementById('dogSize').value;
+    const imageUrl = document.getElementById('dogImage').value;
+
+    const container = document.getElementById('cardsContainer');
+
+    const card = document.createElement('div');
+    card.className = 'card w3-card-4';
+    card.setAttribute('data-age', age);
+    card.setAttribute('data-size', size.toLowerCase());
+
+    card.innerHTML = `
+        <img src="${imageUrl}" alt="${name}">
+        <h3>${name}</h3>
+        <p><span>Életkor:</span> ${age} év</p>
+        <p><span>Méret:</span> ${size}</p>
+        <a href="orokbefogadas.html"><button class="btn">Örökbefogadom!</button></a>
+    `;
+
+    container.appendChild(card);
+
+    // űrlap ürítése
+    document.getElementById('addDogForm').reset();
+}
+
+function megjelenit(){
+    const szoveg = document.getElementById("addDogForm");
+    const megjelenito = document.getElementById("megjelenito");
+    const elrejto = document.getElementById("elrejto");
+    if (megjelenito.onclick) {
+        szoveg.style.display = 'block';
+        megjelenito.style.display = 'none';
+        elrejto.style.display = 'inline';
+    }
+}
+
+function elrejt(){
+    const szoveg = document.getElementById("addDogForm");
+    const megjelenito = document.getElementById("megjelenito");
+    const elrejto = document.getElementById("elrejto");
+    if (elrejto.onclick) {
+        szoveg.style.display = 'none';
+        megjelenito.style.display = 'inline';
+        elrejto.style.display = 'none';
+    }
+}
