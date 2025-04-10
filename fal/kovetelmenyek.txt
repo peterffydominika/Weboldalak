@@ -1,0 +1,56 @@
+Üzenőfal:
+1. Csak bejelentkezett felhasználó használhatja.
+2. Szöveg és kép is lehet az üzenet tartalma
+3. Bárki hozhat létre üzenetet és válaszolhat is (csak üzenetre lehet válaszolni, válaszra nem).
+4. Addig törölhető üzenet (saját), amíg nem érkezett rá válasz.
+5. Saját üzenet szerkeszthető - de csak akkor, ha még nem volt rá válasz
+6. Bejelentkezhet és regisztrálhat, de a jelszónak tartalmaznia kell legalább 1 nagybetűt.
+
+Moderálás:
+    Felhasználók:
+        - jogosultságot állítani
+        - felhasználót felfüggeszthet
+    Üzenetek:
+        - elrejt vagy törölni, ha még nincs rá válasz
+
+felhasznalo:
+    - fnev (e-mail) char(50) primary
+    - nev char(40) nem egyedi
+    - jelszo char(40) 40 hosszú az sha1 kódolás miatt
+    - jog tinyint unsigned alapértelmezett 1
+        0 - felfüggesztett
+        1 - normál
+        2 - admin
+
+uzenet: 
+    - id int unsigned autoincrement
+    - valasz id int értéke 0 ha üzenet, egyébként az eredeti id-je
+    - felhid -> felhasznalo.fnev
+    - uzenet varchar(300)
+    - kep mediumblob
+    - vankep logikai
+    - torolt logikai
+    - ido timestamp
+
+
+Ablakok:
+- menu csak akkor látszik, ha már bejelentkeztünk, de a tartalma változó
+    új üzenet, keresés tartalom, szerző vagy idő szerint, moderálás, ha admin, kilépés
+- bejelentkezes 
+    fnev, jelszo, belépés és regisztráció gomb - ha még nem jelentkezett be, akkor látszik.
+- regisztracio
+    fnev, nev, jelszó kétszer, regisztrál és mégse gomb - alapból nem látszik.
+- új üzenet
+    üzenet, vagy válasz
+    Szöveg
+    esetleg kép
+    rögzít
+    módosítás
+    alapból nem látszik
+- tartalom
+    
+
+
+
+
+

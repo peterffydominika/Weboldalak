@@ -1,0 +1,58 @@
+.latszik{
+    display: block;  
+}
+.nemlatszik{
+    display: none;
+}
+.ablakkozepre{
+    position: absolute;
+    z-index: 3;
+    background-color: white;
+    border: 2px solid black;
+}
+.cellajobbra{
+    text-align: right;
+}
+#menu ul{
+    list-style-type: none;
+}
+#menu li{
+    cursor: pointer;
+}
+#menu li:hover{
+    font-size: larger;
+    font-weight: bold;
+}
+.balra{
+    display: inline;
+    margin: 15px;
+    float: left;
+}
+.jobbra{
+    display: inline;
+    margin: 15px;
+    float: right;
+}
+
+#hiba {
+    clear: both;
+}
+.uzenetek {
+    clear: both;
+}
+.cimsor{
+    font-weight: bold;
+    background-color: lightgray;
+}
+.valaszok {
+    display: none;
+    margin-left: 100px;
+}
+
+#idejonakepem, #uzenetszerk{
+    display: none;
+    position: absolute;
+    z-index: 3;
+    background-color: white;
+    border: 2px solid black;
+}
