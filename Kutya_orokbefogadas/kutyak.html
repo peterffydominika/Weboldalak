@@ -6,9 +6,7 @@
     <title>Örökbefogadható Kutyák</title>
     <link rel="stylesheet" href="kutyak.css">
     <script src="kutyak.js"></script>
-    <style>
-        
-    </style>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
 </head>
 <body>
 
@@ -20,7 +18,7 @@
                 <ul>
                     <li><a href="main.html">Kezdőlap</a></li>
                     <li><a href="rolunk.html">Rólunk</a></li>
-                    <li style="background-color: blue;"><a href="kutyak.html">Kutyák</a></li>
+                    <li><a style="background-color: blue;" href="kutyak.html">Kutyák</a></li>
                 </ul>
             </div>
         </nav>
@@ -32,70 +30,70 @@
         </div>
 
         <div class="cards-container" id="cardsContainer">
-            <div class="card" data-age="2" data-size="kicsi">
+            <div class="card w3-card-4" data-age="2" data-size="kicsi">
                 <img src="images/dog1.jpg" alt="Maxi">
                 <h3>Maxi</h3>
                 <p><span>Életkor:</span> 2 év</p>
                 <p><span>Méret:</span> Kicsi</p>
                 <a href="orokbefogadas.html"><button class="btn">Örökbefogadom!</button></a>
             </div>
-            <div class="card" data-age="5" data-size="nagy">
+            <div class="card w3-card-4" data-age="5" data-size="nagy">
                 <img src="images/dog2.jpg" alt="Rex">
                 <h3>Rex</h3>
                 <p><span>Életkor:</span> 5 év</p>
                 <p><span>Méret:</span> Nagy</p>
                 <a href="orokbefogadas.html"><button class="btn">Örökbefogadom!</button></a>
             </div>
-            <div class="card" data-age="1" data-size="kicsi">
+            <div class="card w3-card-4" data-age="1" data-size="kicsi">
                 <img src="images/dog3.jpg" alt="Lucy">
                 <h3>Lucy</h3>
                 <p><span>Életkor:</span> 1 év</p>
                 <p><span>Méret:</span> Kicsi</p>
                 <a href="orokbefogadas.html"><button class="btn">Örökbefogadom!</button></a>
             </div>
-            <div class="card" data-age="4" data-size="közepes">
+            <div class="card w3-card-4" data-age="4" data-size="közepes">
                 <img src="images/dog4.jpg" alt="Bella">
                 <h3>Bella</h3>
                 <p><span>Életkor:</span> 4 év</p>
                 <p><span>Méret:</span> Közepes</p>
                 <a href="orokbefogadas.html"><button class="btn">Örökbefogadom!</button></a>
             </div>
-            <div class="card" data-age="3" data-size="kicsi">
+            <div class="card w3-card-4" data-age="3" data-size="kicsi">
                 <img src="images/dog5.jpg" alt="Maks">
                 <h3>Max</h3>
                 <p><span>Életkor:</span> 3 év</p>
                 <p><span>Méret:</span> Kicsi</p>
                 <a href="orokbefogadas.html"><button class="btn">Örökbefogadom!</button></a>
             </div>
-            <div class="card" data-age="6" data-size="nagy">
+            <div class="card w3-card-4" data-age="6" data-size="nagy">
                 <img src="images/dog6.jpg" alt="Bambi">
                 <h3>Bambi</h3>
                 <p><span>Életkor:</span> 6 év</p>
                 <p><span>Méret:</span> Nagy</p>
                 <a href="orokbefogadas.html"><button class="btn">Örökbefogadom!</button></a>
             </div>
-            <div class="card" data-age="2" data-size="közepes">
+            <div class="card w3-card-4" data-age="2" data-size="közepes">
                 <img src="images/dogs2.jpg" alt="Zorro">
                 <h3>Zorro</h3>
                 <p><span>Életkor:</span> 2 év</p>
                 <p><span>Méret:</span> Közepes</p>
                 <a href="orokbefogadas.html"><button class="btn">Örökbefogadom!</button></a>
             </div>
-            <div class="card" data-age="3" data-size="nagy">
+            <div class="card w3-card-4" data-age="3" data-size="nagy">
                 <img src="images/dog8.jpg" alt="Charlie">
                 <h3>Charlie</h3>
                 <p><span>Életkor:</span> 3 év</p>
                 <p><span>Méret:</span> Nagy</p>
                 <a href="orokbefogadas.html"><button class="btn">Örökbefogadom!</button></a>
             </div>
-            <div class="card" data-age="8" data-size="közepes">
+            <div class="card w3-card-4" data-age="8" data-size="közepes">
                 <img src="images/dog9.jpg" alt="Trixi">
                 <h3>Trixi</h3>
                 <p><span>Életkor:</span> 8 hónap</p>
                 <p><span>Méret:</span> Közepes</p>
                 <a href="orokbefogadas.html"><button class="btn">Örökbefogadom!</button></a>
             </div>
-            <div class="card" data-age="4" data-size="kicsi">
+            <div class="card w3-card-4" data-age="4" data-size="kicsi">
                 <img src="images/dog10.jpg" alt="Bruno">
                 <h3>Bruno</h3>
                 <p><span>Életkor:</span> 4 év</p>
@@ -103,6 +101,31 @@
                 <a href="orokbefogadas.html"><button class="btn">Örökbefogadom!</button></a>
             </div>
         </div>
+        <span onclick="megjelenit()" id="megjelenito" style="display: inline;">Új kutya felvitele</span>
+        <span onclick="elrejt()" id="elrejto" style="display: none;">Elrejtés</span>
+        <form action="kutyak.php" method="POST" class="w3-panel w3-card-4 w3-center" id="addDogForm" onsubmit="addDog(event)" style="display: none; text-align: center;">
+            <h2>Új kutya hozzáadása</h2>
+            <label for="dogName">Név</label>
+            <input type="text" id="dogName" placeholder="Név" required><br>
+            <br>
+            <label for="dogAge">Életkor</label>
+            <input type="number" id="dogAge" placeholder="Életkor (év)" required><br>
+            <br>
+            <label for="dogSize">Méret</label>
+            <select id="dogSize" required>
+                <option value="">Válassz méretet</option>
+                <option value="Kicsi">Kicsi</option>
+                <option value="Közepes">Közepes</option>
+                <option value="Nagy">Nagy</option>
+            </select><br>
+            <br>
+            <label for="dogImage">Kép URL</label>
+            <input type="text" id="dogImage" placeholder="Kép URL-je" required><br>
+            <br>
+            <button type="submit">Hozzáadás</button><br>
+            <br>
+        </form>
+
     </section>
 
 </body>
