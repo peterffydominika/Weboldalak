@@ -1,0 +1,57 @@
+<section class="auth-section">
+    <h2>Bejelentkezés / Regisztráció</h2>
+
+    <div id="auth-forms">
+        <div class="auth-form">
+            <h3>Regisztráció</h3>
+            <input type="text" id="reg-username" placeholder="Felhasználónév">
+            <input type="password" id="reg-password" placeholder="Jelszó">
+            <button onclick="register()">Regisztrálok</button>
+        </div>
+
+        <div class="auth-form">
+            <h3>Bejelentkezés</h3>
+            <input type="text" id="login-username" placeholder="Felhasználónév">
+            <input type="password" id="login-password" placeholder="Jelszó">
+            <button onclick="login()">Bejelentkezés</button>
+        </div>
+    </div>
+
+    <div id="welcome-message" style="display: none;">
+        <p>Szia, <span id="logged-user"></span>!</p>
+        <button onclick="logout()">Kijelentkezés</button>
+    </div>
+</section>
+<style>
+    .auth-section {
+    padding: 2rem;
+    background-color: #f5f5f5;
+    margin: 2rem;
+    border-radius: 10px;
+}
+
+.auth-form {
+    margin-bottom: 1.5rem;
+}
+
+.auth-form input {
+    display: block;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 300px;
+}
+
+.auth-form button {
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.auth-form button:hover {
+    background-color: #555;
+}
+
+</style>
