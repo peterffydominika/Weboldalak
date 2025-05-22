@@ -49,5 +49,67 @@ function searchComics() {
             product.style.display = "none";
         }
     });
+
+
+
+
+// Regisztráció
+function register() {
+    const username = document.getElementById('reg-username').value;
+    const password = document.getElementById('reg-password').value;
+
+    if (!username || !password) {
+        alert('Kérlek tölts ki minden mezőt!');
+        return;
+    }
+
+    if (localStorage.getItem(username)) {
+        alert('Ez a felhasználónév már létezik!');
+        return;
+    }
+
+    localStorage.setItem(username, JSON.stringify({ password }));
+    alert('Sikeres regisztráció!');
+}
+
+// Bejelentkezés
+function login() {
+    const username = document.getElementById('login-username').value;
+    const password = document.getElementById('login-password').value;
+
+    const user = JSON.parse(localStorage.getItem(username));
+
+    if (!user || user.password !== password) {
+        alert('Hibás felhasználónév vagy jelszó!');
+        return;
+    }
+
+    sessionStorage.setItem('loggedInUser', username);
+    showWelcome();
+}
+
+// Kijelentkezés
+function logout() {
+    sessionStorage.removeItem('loggedInUser');
+    document.getElementById('auth-forms').style.display = 'flex';
+    document.getElementById('welcome-message').style.display = 'none';
+}
+
+// Felhasználó megjelenítése
+function showWelcome() {
+    const user = sessionStorage.getItem('loggedInUser');
+    if (user) {
+        document.getElementById('auth-forms').style.display = 'none';
+        document.getElementById('welcome-message').style.display = 'block';
+        document.getElementById('logged-user').innerText = user;
+    }
+}
+
+// Automatikus betöltésnél ellenőrzés
+document.addEventListener('DOMContentLoaded', showWelcome);
+
+
+
+
 }
  
