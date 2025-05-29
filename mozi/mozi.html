@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mozi Műsor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Mozi Műsor</h1>
+    <nav>
+      <ul>
+        <li><a href="mozi.html">Főoldal</a></li>
+        <li><a href="kapcsolat.html">Kapcsolat</a></li>
+        <li><a href="rolunk.html">Rólunk</a></li>
+        <li><a href="kosar.html">Kosár</a></li>
+
+      </ul>
+    </nav>
+  </header>
+  <input type="text" id="searchBar" placeholder="Keresés a filmek között..." onkeyup="searchFilmek()">
+  <main>
+    <section id="filmek" class="film-lista"></section>
+
+    <div id="popup" class="popup rejtett">
+      <div class="popup-tartalom">
+        <h2 id="popup-szoveg"></h2>
+        <button onclick="bezarPopup()">Bezár</button>
+
+        <div id="szekek-container" class="szekek-container rejtett"></div>
+<div id="kosar" class="kosar rejtett">
+  <h3>Kosár</h3>
+  <ul id="kosar-lista"></ul>
+  <button onclick="vasarlas()">Jegyek megvásárlása</button>
+</div>
+
+      </div>
+    </div>
+  </main>
+
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
